@@ -32,12 +32,12 @@ This repository contains an automated script that listens for alerts from New Re
 
 ```mermaid
 flowchart TD
-    A[New Relic Alert Triggered] --> B[Webhook Payload Received]
-    B --> C[Check if alert is ACTIVATED]
+    A[New Relic<br>Alert Triggered] --> B[Webhook Payload<br>Received]
+    B --> C[Check if alert<br>is ACTIVATED]
     C -- No --> Z[Ignore and exit]
     C -- Yes --> D[Parse impactedEntities]
-    D --> E[Call New Relic GraphQL API for each entity]
-    E --> F[Fetch recent ErrorTrace events]
-    F --> G[Generate CSV from error data]
-    G --> H[Send email via SMTP with CSV attachment]
-    H --> I[Log success or failure]
+    D --> E[Call New Relic<br>GraphQL API]
+    E --> F[Fetch recent<br>ErrorTrace events]
+    F --> G[Generate CSV<br>from error data]
+    G --> H[Send email via<br>SMTP with attachment]
+    H --> I[Log success<br>or failure]
